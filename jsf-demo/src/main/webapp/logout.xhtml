@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      >
+
+ 
+<h:body>
+<h:outputLabel  value="Creer  un nouveau compte  car vous etes pas identifié dans la base "></h:outputLabel>
+  <h:form>
+         <h:panelGrid   columns="3">
+          
+              <h:outputLabel  value="Username"></h:outputLabel>
+              <h:inputText    value="#{signup.name}"   required="true"  requiredMessage="Please   ,fill   this   field" id  ="usern"></h:inputText>
+              <h:message for="usern"   class="error_message"></h:message>
+         
+              
+              <h:outputLabel    value="password"    ></h:outputLabel>
+              <h:inputText   value="#{signup.pass}"     required="true"   requiredMessage="Please  ,fill    this fields"   id="pass"></h:inputText>
+               <h:message for="pass"   class="error_message"></h:message>
+               <h:commandButton     value="enregistrer"    action="#{signup.register}"   ></h:commandButton>
+     
+    
+         </h:panelGrid>
+         </h:form>
+
+</h:body>
+
+</html>

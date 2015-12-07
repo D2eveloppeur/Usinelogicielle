@@ -1,0 +1,64 @@
+package com.jsf.bean;
+import java.io.Serializable;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
+
+import connectionService.connectionserviceImplement;
+
+@ManagedBean(name="bean" ,eager=true)
+@SessionScoped
+public class authentification   implements   Serializable{
+
+	public connectionserviceImplement getConnectionservice() {
+		return connectionservice;
+	}
+
+	public void setConnectionservice(connectionserviceImplement connectionservice) {
+		this.connectionservice = connectionservice;
+	}
+
+
+	private   String   name  ; 
+	private   String   pass  ;
+	//private     boolean     idlogged   ;
+	private  connectionserviceImplement   connectionservice  ;
+	
+	
+
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPass() {
+		return pass;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+
+	public boolean isIdlogged() {
+		return idlogged;
+	}
+
+	public void setIdlogged(boolean idlogged) {
+		this.idlogged = idlogged;
+	}
+	
+	
+ public  String   action ()
+ {
+	
+	 return "/forum.xhml?faces-redirect = true"     ;
+	 
+ }
+
+}
+
